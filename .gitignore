@@ -1,4 +1,9 @@
 ###################
+# Project files   #
+###################
+appsettings.json
+*.db
+###################
 # compiled source #
 ###################
 *.com
@@ -29,6 +34,12 @@ TestResults/
 # Web publish log #
 ###################
 *.Publish.xml
+#############
+#   VSCode  #
+#############
+.vscode
+.ionide
+.DS_Store
 #############
 # Resharper #
 #############

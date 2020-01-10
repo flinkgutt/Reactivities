@@ -14,14 +14,12 @@ interface IProps {
   setSelectedActivity: (activity: IActivity | null) => void;
   createActivity: (activity: IActivity) => void;
   editActivity: (activity: IActivity) => void;
-  deleteActivity: (/*e: SyntheticEvent<HTMLButtonElement>,*/ id: string) => void;
+  deleteActivity: (id: string) => void;
   submitting: boolean;
   target: string;
 }
 
 export const ActivityDashboard: React.FC<IProps> = ({
-  activities,
-  selectActivity,
   setEditMode,
   setSelectedActivity,
   createActivity,

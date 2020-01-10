@@ -1,4 +1,4 @@
-import { observable, action } from 'mobx';
+import { observable, action, configure } from 'mobx';
 import { createContext } from 'react';
 import { IActivity } from '../models/activity';
 import agent from '../api/agent';

@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, SyntheticEvent } from "react";
 import { Item, Button, Label, Segment } from "semantic-ui-react";
 import { observer } from "mobx-react-lite";
 import ActivityStore from '../../../app/stores/activityStore';
 
 interface IProps {
-  deleteActivity: ( id: string) => void;
+  deleteActivity: (id: string) => void;
   submitting: boolean
   target: string
 }
@@ -32,7 +32,10 @@ export const ActivityList: React.FC<IProps> = ({
               </Item.Description>
               <Item.Extra>
                 <Button
-                  onClick={() => selectActivity(activity.id)}
+                  onClick={() => {
+                    selectActivity(activity.id);
+                    console.log("ActivityList->selectActivity " + activity.id);
+                  }}
                   floated="right"
                   content="View"
                   color="blue"
